@@ -1,11 +1,18 @@
-// //  todo tu código que tenga que ver con mostrar los datos en la pantalla. Con esto nos referimos básicamente a la interacción con el DOM. Operaciones como creación de nodos, registro de manejadores de eventos (event listeners o event handlers), ....
+// import la funcion de data.js
+import { filterData } from './data.js';
 
-import {filter} from "./data.js"; 
-console.log(filter);
+//importando la data de harry potter
+import data from './data/harrypotter/data.js';
 
-import harrypotter from "./data/harrypotter/data.js"
-console.log(harrypotter);
+const casas=document.getElementsByClassName("casas");
+//console.log(casas) // array recorrer
 
-// import{area} from "./data.js"
-// console.log("area: " + area(10));
+for (let index = 0; index < casas.length; index++) {
+  // console.log(casas[index]) // tenemos cada li
+
+    casas[index].addEventListener("click", function() {
+       // console.log(casas[index].id) // obtenemos id de cada li
+        filterData(data,casas[index].id) //enviamos argumentos 
+    })
+}
 
