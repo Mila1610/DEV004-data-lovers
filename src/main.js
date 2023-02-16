@@ -28,7 +28,6 @@ for (let index = 0; index < OrdenPersanajes.length; index++) {
   })
 }
 
-
 //Funcion para Contar
 const characters = data.characters
 const count= {}
