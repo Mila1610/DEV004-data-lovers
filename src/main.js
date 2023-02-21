@@ -1,21 +1,23 @@
 // import la funcion de data.js
 import { filterData } from './data.js';
 import {OrdenarP} from './data.js';
+import {Calcular} from './data.js';
 
 //importando la data de harry potter
 import data from './data/harrypotter/data.js';
 
-let casaSeleccionada;
+let ultimofiltro;
 
 const MenuCasas = document.getElementsByClassName ("casas")
-// MenuCasas.forEach (element => element.addEventListener ("click", filterData (data, element.id)) ) 
 
 for (let index = 0; index < MenuCasas.length; index++) {
   //console.log(MenuCasas[index]) // tenemos cada li
   MenuCasas[index].addEventListener("click", function() {
     // console.log(casas[index].id) // obtenemos id de cada li
-    casaSeleccionada = MenuCasas[index].id
-    filterData(data.characters,casaSeleccionada) //enviamos argumentos 
+    const casaSeleccionada = MenuCasas[index].id
+    const filterHouses = filterData(data.characters,casaSeleccionada) //enviamos argumentos 
+    printData(filterHouses)
+    ultimofiltro=filterHouses
   })
 }
 
@@ -23,22 +25,32 @@ for (let index = 0; index < MenuCasas.length; index++) {
 const OrdenPersanajes = document.getElementsByClassName ("Ordenes")
 for (let index = 0; index < OrdenPersanajes.length; index++) {
   OrdenPersanajes[index].addEventListener("click", function() {
-    const dataordenada= OrdenarP(data.characters,OrdenPersanajes[index].id)
-    filterData(dataordenada,casaSeleccionada)
+    const dataordenada= OrdenarP(ultimofiltro)
+    if(OrdenPersanajes[index].id==="A-Z"){
+      printData(dataordenada)
+    }else{
+      printData(dataordenada.reverse())
+    }
   })
 }
 
-//Funcion para Contar
-const characters = data.characters
-const count= {}
 
-characters.forEach ((character) =>{
-  if(!count[character.species]) {
-    count[character.species] = 1
-  } else {count[character.species] += 1}
-
-} )
-console.log(count);
+const calcular =document.getElementsByClassName ("Calculo")
+for (let index = 0; index < calcular.length; index++) {
+  calcular[index].addEventListener("click", function() {
+    Calcular(ultimofiltro)
+  })
+}
 
 
-
+const printData = (array)=>{
+  const $casas=document.getElementById("root");
+   
+  //muestra los personajes que hay por cada una de las casas
+  $casas.innerHTML = ""   
+  array.forEach(item => {  
+    const $div = document.createElement ("div") 
+    $div.innerHTML= item.name  
+    $casas.appendChild ($div)   
+  } )
+}

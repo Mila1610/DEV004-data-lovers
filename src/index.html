@@ -4,22 +4,43 @@
     <meta charset="utf-8">
     <title>Data Lovers</title>
 	    <link rel="stylesheet" href="style.css" />
-				<link rel="stylesheet" href="font/fontello.css">
 </head>
 
 <body>
 <div id="root"></div>
 
-<main>
-	<section id="banner">
-	<img src="img/img.JP.jpg" alt="harryPotter">
-	<div class="contenedor">
-		<h1>Hola</h1>
-		<p>Hola</p>
-		 <a href="#">Leer mas</a> 
+ <!-- Topbar Start -->
+  <div class="container-fluid bg-primary py-3 d-none d-md-block">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 text-center text-lg-left mb-2 mb-lg-0">
+				<div class="d-inline-flex align-items-center">
+					<a class="text-white pr-3" href="">Contacto</a>
+					<span class="text-white">|</span>
+					<a class="text-white px-3" href="">Ayuda</a>
+					<span class="text-white">|</span>
+					<a class="text-white pl-3" href="">Mas</a>
+				</div>
+			</div>
+			<div class="col-md-6 text-center text-lg-right">
+				<div class="d-inline-flex align-items-center">
+			</div>
+			</div>
 		</div>
-	</section>
-</main>
+	</div>
+</div> 
+<!-- Topbar End -->
+
+<div class="carousel-container">
+	<ul class="carousel">
+	  <li><img src="img/d.jpg" alt=""></li>
+	  <li><img src="img/b.jpg" alt=""></li>
+	  <li><img src="img/c.jpg" alt=""></li>
+	  <li><img src="img/a.jpg" alt=""></li>
+	  
+	</ul>
+  </div>
+  
 
 <section id="Filtro y Ordenar">
     <div id="header">
@@ -38,20 +59,22 @@
 			</li>
 			<li><a>Ordenar</a>
 				<ul>
-					<li class="Ordenes Descendente" id="A-Z"><a>Alfabeticamente A-Z</a></li>
-					<li class="Ordenes Ascendente" id="Z-A"><a>Alfabeticamente Z-A</a></li>
+					<li class="Ordenes" id="A-Z"><a>Alfabeticamente A-Z</a></li>
+					<li class="Ordenes" id="Z-A"><a>Alfabeticamente Z-A</a></li>
 				</ul>
 			</li>
+			<li><a>Calcular</a>
+			<ul>
+				<li class="Calculo" id="species"><a>Specie</a></li>
+				<!-- <li class="Calculo " id=""><a>Alfabeticamente Z-A</a></li> -->
+			</ul>
+		   </li>
 		</ul>
 	</div>
+	
 </section>
 
-<section>
-	<img src="img/d.jpg">
-	<img src="img/b.jpg">
-	<img src="img/c.jpg">
-	<img src="img/a.jpg">
-</section>
+
     <script src="main.js" type="module"></script>
 
   </body>
