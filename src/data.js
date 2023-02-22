@@ -31,6 +31,12 @@ export const OrdenarP = (personajes) => {
 };
 
 //Funcion para Contar
-export const Calcular = () => {
-// console.log(cantidad.length)
+export const Calcular = (cantidad) => {
+  let suma=0;
+  for(let i=0;i<=cantidad.lengt;i++){
+    suma=suma+1;
+  }
+ console.log(cantidad.length)
 };
+
+

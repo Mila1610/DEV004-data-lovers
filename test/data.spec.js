@@ -187,7 +187,7 @@ describe('Calcular', () => {
         "name": "Euan Abercrombie",
         "birth": "between 1 September 1983 and 31 August 1984",
         "house": "Gryffindor",
-        "species": "Peacock"
+        "species": "Human"
       },
       {
         "id": 2,
@@ -217,6 +217,15 @@ describe('Calcular', () => {
         "house": null,
         "species": "Human"
       },]
-    expect(Calcular(data, "Human")).toStrictEqual(result);
+    expect(Calcular(data,"species")).toStrictEqual(result);
   });
+  
+// Estresa
+//   it('', ()=>{
+//     expect(Calcular(data, "")).toBeFalsy();
+//     // expect(Calcular(data, "")).toBe(false); // matchers jest
+//   })
 });
+
+
+

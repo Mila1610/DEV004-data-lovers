@@ -54,3 +54,4 @@ const printData = (array)=>{
     $casas.appendChild ($div)   
   } )
 }
+
