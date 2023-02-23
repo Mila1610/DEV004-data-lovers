@@ -1,20 +1,17 @@
-
-*{
+ *{
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
-	font-family: 'Open Sans';
-}
-* {
-    margin:0px;
-    padding:0px;
-}
+	box-sizing: border-box; /*para que todo se contenga dentro de un mismo modelo de caja*/
+	 font-family: 'Open Sans';
+} 
 
-#header {
+/*codigo para las cajitas negras*/
+ #header {
     margin:auto;
     width:500px;
     font-family:Arial, Helvetica, sans-serif;
 }
+
 
 ul, ol {
     list-style:none;
@@ -22,9 +19,9 @@ ul, ol {
 
 .nav > li {
     float:left;
-}
+} 
 
-.nav li a {
+ .nav li a {
     background-color:#000;
     color:#fff;
     text-decoration:none;
@@ -48,9 +45,105 @@ ul, ol {
 
 .nav li ul li {
     position:relative;
-}
+} 
 
-.nav li ul li ul {
+ .nav li ul li ul {
     right:-140px;
     top:0px;
+}  
+
+ /*codigo para la parte superior*/
+
+  .bg-primary {
+    background-color: #030303 !important;
+  }
+
+.d-inline-flex { 
+    display: inline-flex !important;
+  }
+
+  .align-items-center {
+    align-items: center !important;
+  }
+
+  .text-white {
+    color: #fff !important;
+  }
+
+  .pr-3,
+.px-3 {
+  padding-right: 1rem !important;
 }
+
+.pl-3,
+.px-3 {
+  padding-left: 1rem !important;
+}
+
+  /*Codigo Carrusel*/
+
+  .carousel-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .carousel {
+    /* display: flex; */
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    /* transition: transform 0.6s ease-in-out; */
+  }
+  
+  .carousel li {
+    width: 25%;
+    float: left;
+  }
+  
+  .carousel li img {
+    width: 100%;
+  }
+  
+  /* .carousel li:nth-child(1) {
+    order: 1;
+  }
+  
+  .carousel li:nth-child(2) {
+    order: 2;
+  }
+  
+  .carousel li:nth-child(3) {
+    order: 3;
+  }
+  
+  .carousel li:nth-child(4) {
+    order: 4;
+  } */
+
+  /* .carousel {
+    animation: carousel 20s linear infinite;
+  } */
+  
+  /* @keyframes carousel {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  } */
+
+  /* @media (max-width: 768px) {
+    .carousel li {
+      width: 50%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .carousel li {
+      width: 100%;
+    }
+  } */
+  

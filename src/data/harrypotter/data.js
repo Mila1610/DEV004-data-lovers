@@ -1,4 +1,5 @@
-export default {
+export default
+{
   characters: [
     {
       "id": 1,
@@ -16225,4 +16226,4 @@ export default {
       "description": "Harry's second son entered Hogwarts, but in Slytherin. His relationship with Harry is getting worse and he became close friends with Draco's son, Scorpius Malfoy who is said to be Lord Voldemort's son."
     }
   ]
-}
+}   
