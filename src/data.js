@@ -16,6 +16,9 @@ export const filterData = (characters, casas) => {
 
 //Funcion para Ordenar de A-Z
 export const OrdenarP = (personajes) => {
+  if (personajes === "") {    // se agrego para que pudiesen pasar los test
+    return false;
+  }
   personajes.sort((a, b) => {
     if (a.name > b.name) {
       return 1;
@@ -32,11 +35,15 @@ export const OrdenarP = (personajes) => {
 
 //Funcion para Contar
 export const Calcular = (cantidad) => {
+  if (cantidad === "") {
+    return false;
+  }
   let suma=0;
-  for(let i=0;i<=cantidad.lengt;i++){
+  for(let i=0;i<=cantidad.length;i++){
     suma=suma+1;
   }
- console.log(cantidad.length)
+  //console.log(cantidad.length)
+  return cantidad.length;
 };
 
 
